@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import  ClickCounter  from "./hooksExercise";
 import { Label, Note } from "./types";
 import {dummyNotesList} from "./constants";
 
@@ -9,9 +10,18 @@ function App() {
   return (
     <div className='app-container'>
       <form className="note-form">
-       <div><input placeholder="Note Title"></input></div>
+       <div><textarea placeholder="Note Title"></textarea></div>
 
-       <div><textarea></textarea></div>
+       <div><textarea placeholder='Note Content'></textarea></div>
+       
+       <div>
+       <select name ="label" id="label-select">
+                    <option value="personal">Personal</option>
+                    <option value="work">Work</option>
+                    <option value="study">Study</option>
+                    <option value="other">Other</option>
+        </select>
+       </div>
 
        <div><button type="submit">Create Note</button></div>
       </form>
@@ -31,6 +41,7 @@ function App() {
           </div>
       ))}
       </div>
+      <ClickCounter/>
     </div>
  
   );

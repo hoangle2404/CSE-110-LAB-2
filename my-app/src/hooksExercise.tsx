@@ -48,9 +48,6 @@ function ToggleTheme() {
       </ThemeContext.Provider>
     );
    }
-   
-function ToggleFav() {
-    const [favorite, setFavorite ] = useState([]);
-}
+  
 
 export default ToggleTheme;
